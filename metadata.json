@@ -1,0 +1,6 @@
+{
+  "name": "My Crush Pizza",
+  "description": "Pizza ordering, live GPS delivery tracking, delivery partner dashboard, and admin command center for My Crush Pizza – Hajipur.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

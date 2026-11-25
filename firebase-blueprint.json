@@ -1,0 +1,239 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Customer, delivery partner, or admin profile in My Crush Pizza Hajipur.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "Firebase Auth UID of the user." },
+        "displayName": { "type": "string", "description": "Full name of the user." },
+        "email": { "type": "string", "description": "Verified email address." },
+        "phone": { "type": "string", "description": "10-digit Indian mobile number." },
+        "defaultAddress": { "type": "string", "description": "Default Hajipur delivery address." },
+        "defaultLat": { "type": "number", "description": "Default delivery latitude." },
+        "defaultLng": { "type": "number", "description": "Default delivery longitude." },
+        "role": { "type": "string", "enum": ["CUSTOMER", "DELIVERY", "ADMIN"] },
+        "vehicleNumber": { "type": "string", "description": "Delivery partner vehicle registration." },
+        "depositBalanceInr": { "type": "integer", "description": "Customer deposited / admin-credited wallet balance in INR." },
+        "bonusBalanceInr": { "type": "integer", "description": "Customer promotional bonus wallet balance in INR." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Server timestamp." },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Server timestamp." }
+      },
+      "required": ["userId", "displayName", "role", "createdAt", "updatedAt"]
+    },
+    "AdminRecord": {
+      "title": "AdminRecord",
+      "description": "Authorized store administrator record.",
+      "type": "object",
+      "properties": {
+        "adminUid": { "type": "string" },
+        "email": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["adminUid", "email", "createdAt"]
+    },
+    "StoreConfig": {
+      "title": "StoreConfig",
+      "description": "My Crush Pizza Hajipur restaurant configuration, opening hours, and delivery fees.",
+      "type": "object",
+      "properties": {
+        "storeName": { "type": "string" },
+        "branchAddress": { "type": "string" },
+        "storePhone": { "type": "string" },
+        "openTime": { "type": "string" },
+        "closeTime": { "type": "string" },
+        "isOpen": { "type": "boolean" },
+        "deliveryChargeInr": { "type": "integer" },
+        "freeDeliveryMinOrderInr": { "type": "integer" },
+        "taxPercent": { "type": "integer" },
+        "storeLat": { "type": "number" },
+        "storeLng": { "type": "number" },
+        "razorpayEnabled": { "type": "boolean" },
+        "razorpayKeyId": { "type": "string" },
+        "razorpayMerchantName": { "type": "string" },
+        "razorpayPaymentLink": { "type": "string" },
+        "razorpayMode": { "type": "string", "enum": ["LIVE", "TEST"] },
+        "merchantUpiId": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["storeName", "branchAddress", "openTime", "closeTime", "isOpen", "deliveryChargeInr", "freeDeliveryMinOrderInr", "taxPercent", "storeLat", "storeLng", "updatedAt"]
+    },
+    "MenuItem": {
+      "title": "MenuItem",
+      "description": "Pizza, burger, garlic bread, pasta, beverage, or combo menu item priced in INR.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "priceRegularInr": { "type": "integer" },
+        "priceMediumInr": { "type": "integer" },
+        "priceLargeInr": { "type": "integer" },
+        "imageKey": { "type": "string" },
+        "isVeg": { "type": "boolean" },
+        "isBestseller": { "type": "boolean" },
+        "isAvailable": { "type": "boolean" },
+        "spiceLevel": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "description", "category", "priceRegularInr", "priceMediumInr", "priceLargeInr", "imageKey", "isVeg", "isBestseller", "isAvailable", "createdAt", "updatedAt"]
+    },
+    "Coupon": {
+      "title": "Coupon",
+      "description": "Discount coupon code for checkout.",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "discountType": { "type": "string", "enum": ["FLAT", "PERCENT"] },
+        "discountValue": { "type": "integer" },
+        "minOrderInr": { "type": "integer" },
+        "maxDiscountInr": { "type": "integer" },
+        "isActive": { "type": "boolean" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["code", "title", "discountType", "discountValue", "minOrderInr", "maxDiscountInr", "isActive", "updatedAt"]
+    },
+    "DeliveryPartner": {
+      "title": "DeliveryPartner",
+      "description": "Registered delivery boy profile and live GPS status.",
+      "type": "object",
+      "properties": {
+        "partnerUid": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "pinCode": { "type": "string" },
+        "vehicleNumber": { "type": "string" },
+        "isActive": { "type": "boolean" },
+        "isAvailable": { "type": "boolean" },
+        "currentLat": { "type": "number" },
+        "currentLng": { "type": "number" },
+        "activeOrderId": { "type": "string" },
+        "completedDeliveries": { "type": "integer" },
+        "totalEarningsInr": { "type": "integer" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["partnerUid", "name", "phone", "pinCode", "vehicleNumber", "isActive", "isAvailable", "currentLat", "currentLng", "completedDeliveries", "totalEarningsInr", "updatedAt"]
+    },
+    "PizzaOrder": {
+      "title": "PizzaOrder",
+      "description": "Customer pizza order with live tracking coordinates and kitchen barcode.",
+      "type": "object",
+      "properties": {
+        "orderNumber": { "type": "string" },
+        "barcodeValue": { "type": "string" },
+        "customerId": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerPhone": { "type": "string" },
+        "deliveryAddress": { "type": "string" },
+        "landmark": { "type": "string" },
+        "customerLat": { "type": "number" },
+        "customerLng": { "type": "number" },
+        "itemsSummary": { "type": "string" },
+        "itemsCount": { "type": "integer" },
+        "subtotalInr": { "type": "integer" },
+        "discountInr": { "type": "integer" },
+        "couponCode": { "type": "string" },
+        "deliveryFeeInr": { "type": "integer" },
+        "taxInr": { "type": "integer" },
+        "totalInr": { "type": "integer" },
+        "paymentMethod": { "type": "string", "enum": ["UPI", "ONLINE", "COD"] },
+        "paymentStatus": { "type": "string", "enum": ["PAID", "PENDING"] },
+        "status": { "type": "string", "enum": ["CONFIRMED", "PREPARING", "READY", "ASSIGNED", "PICKED_UP", "ON_THE_WAY", "DELIVERED", "CANCELLED"] },
+        "deliveryPartnerId": { "type": "string" },
+        "deliveryPartnerName": { "type": "string" },
+        "deliveryPartnerPhone": { "type": "string" },
+        "deliveryPartnerVehicle": { "type": "string" },
+        "deliveryLat": { "type": "number" },
+        "deliveryLng": { "type": "number" },
+        "isLocationSharingActive": { "type": "boolean" },
+        "estimatedMinutes": { "type": "integer" },
+        "distanceKm": { "type": "number" },
+        "adminAlertAcknowledged": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "orderNumber",
+        "barcodeValue",
+        "customerId",
+        "customerName",
+        "customerPhone",
+        "deliveryAddress",
+        "customerLat",
+        "customerLng",
+        "itemsSummary",
+        "itemsCount",
+        "subtotalInr",
+        "discountInr",
+        "deliveryFeeInr",
+        "taxInr",
+        "totalInr",
+        "paymentMethod",
+        "paymentStatus",
+        "status",
+        "deliveryPartnerId",
+        "deliveryLat",
+        "deliveryLng",
+        "isLocationSharingActive",
+        "estimatedMinutes",
+        "distanceKm",
+        "adminAlertAcknowledged",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "AppNotification": {
+      "title": "AppNotification",
+      "description": "Real-time order and promo notifications for customers.",
+      "type": "object",
+      "properties": {
+        "recipientUid": { "type": "string" },
+        "orderId": { "type": "string" },
+        "orderNumber": { "type": "string" },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "type": { "type": "string" },
+        "isRead": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["recipientUid", "title", "message", "type", "isRead", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "User profiles isolated by userId."
+    },
+    "/admins/{adminUid}": {
+      "schema": { "$ref": "#/entities/AdminRecord" },
+      "description": "Admin registry."
+    },
+    "/store_config/{configId}": {
+      "schema": { "$ref": "#/entities/StoreConfig" },
+      "description": "Store settings and opening hours."
+    },
+    "/menu_items/{itemId}": {
+      "schema": { "$ref": "#/entities/MenuItem" },
+      "description": "Pizza and sides menu catalog."
+    },
+    "/coupons/{couponId}": {
+      "schema": { "$ref": "#/entities/Coupon" },
+      "description": "Promotional discount coupons."
+    },
+    "/delivery_partners/{partnerId}": {
+      "schema": { "$ref": "#/entities/DeliveryPartner" },
+      "description": "Delivery partner profiles and live telemetry."
+    },
+    "/orders/{orderId}": {
+      "schema": { "$ref": "#/entities/PizzaOrder" },
+      "description": "Customer pizza orders and real-time GPS tracking."
+    },
+    "/notifications/{notifId}": {
+      "schema": { "$ref": "#/entities/AppNotification" },
+      "description": "Customer real-time order notifications."
+    }
+  }
+}

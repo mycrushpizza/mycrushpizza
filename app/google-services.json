@@ -1,0 +1,158 @@
+{
+  "project_info": {
+    "project_number": "806911182988",
+    "project_id": "gen-lang-client-0739338854",
+    "storage_bucket": "gen-lang-client-0739338854.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806911182988:android:5e38cd209b1f596b3213a9",
+        "android_client_info": {
+          "package_name": "com.aistudio.mycrushpizza.hjprxp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806911182988-ofmflfjfff0et4kagqr175fu7tifdr9f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aistudio.mycrushpizza.hjprxp",
+            "certificate_hash": "c50b28a4c8be98e06d07818865311b6cd707ea87"
+          }
+        },
+        {
+          "client_id": "806911182988-t9ohrkmu8bv87lh3khspb7ludqejdr2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2RTY6Hff3jTQoWKe_3SSTXmf7xUu4494"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806911182988-t9ohrkmu8bv87lh3khspb7ludqejdr2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806911182988:android:35f224c28d5efae43213a9",
+        "android_client_info": {
+          "package_name": "com.aistudio.mycrushpizza.hjpxrz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806911182988-fvfkjvvkfevkd9jm5i3pu54q0s1ge42c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aistudio.mycrushpizza.hjpxrz",
+            "certificate_hash": "de7920a756995004422a11bd192b03bb28ce1b93"
+          }
+        },
+        {
+          "client_id": "806911182988-t9ohrkmu8bv87lh3khspb7ludqejdr2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2RTY6Hff3jTQoWKe_3SSTXmf7xUu4494"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806911182988-t9ohrkmu8bv87lh3khspb7ludqejdr2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806911182988:android:d9a8bafc360a2b313213a9",
+        "android_client_info": {
+          "package_name": "com.mycrushpizza.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806911182988-eq64cdbtccbidr3rr7m2eb1nq849m3p6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycrushpizza.app",
+            "certificate_hash": "c50b28a4c8be98e06d07818865311b6cd707ea87"
+          }
+        },
+        {
+          "client_id": "806911182988-t9ohrkmu8bv87lh3khspb7ludqejdr2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2RTY6Hff3jTQoWKe_3SSTXmf7xUu4494"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806911182988-t9ohrkmu8bv87lh3khspb7ludqejdr2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806911182988:android:14752788f18d784b3213a9",
+        "android_client_info": {
+          "package_name": "com.mycrushpizza.in"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806911182988-1v6r5ncopoesq7758idj5fo14crkltom.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycrushpizza.in",
+            "certificate_hash": "c50b28a4c8be98e06d07818865311b6cd707ea87"
+          }
+        },
+        {
+          "client_id": "806911182988-t9ohrkmu8bv87lh3khspb7ludqejdr2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2RTY6Hff3jTQoWKe_3SSTXmf7xUu4494"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806911182988-t9ohrkmu8bv87lh3khspb7ludqejdr2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
