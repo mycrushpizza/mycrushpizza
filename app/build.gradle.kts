@@ -31,7 +31,7 @@ android {
       val keystorePath = System.getenv("KEYSTORE_PATH") ?: "${rootDir}/mycrushpizza.jks"
       storeFile = file(keystorePath)
       storePassword = System.getenv("STORE_PASSWORD")
-      keyAlias = "mycrushpizza"
+      keyAlias = System.getenv("KEY_ALIAS") ?: "mycrushpizza"
       keyPassword = System.getenv("KEY_PASSWORD")
     }
     create("debugConfig") {
