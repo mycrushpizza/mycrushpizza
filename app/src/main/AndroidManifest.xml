@@ -45,8 +45,6 @@
             android:name="com.example.util.AdminOrderAlarmReceiver"
             android:exported="false" />
 
-        <service
-            android:exported="false"
     </application>
 
 </manifest>
